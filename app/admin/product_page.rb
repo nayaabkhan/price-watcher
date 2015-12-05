@@ -12,6 +12,16 @@ ActiveAdmin.register ProductPage do
 #   permitted << :other if resource.something?
 #   permitted
 # end
+permit_params :product_id, :site_id, :url
 
+index do
+  selectable_column
+  column "Product" do |product_page|
+    link_to product_page.product.title, admin_product_path(product_page.product)
+  end
+  column "Site" do |product_page|
+    link_to product_page.site.name, admin_site_path(product_page.site)
+  end
+end
 
 end
