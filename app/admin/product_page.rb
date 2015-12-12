@@ -22,6 +22,7 @@ index do
   column "Site" do |product_page|
     link_to product_page.site.name, admin_site_path(product_page.site)
   end
+  column :in_stock
   actions
 end
 
