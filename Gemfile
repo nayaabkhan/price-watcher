@@ -22,6 +22,10 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
+# Nokogiri for scraping
+gem 'nokogiri'
+
+
 # Active Admin for admin interface
 gem 'activeadmin', github: 'activeadmin'
 
