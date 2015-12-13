@@ -1,0 +1,18 @@
+<div>
+  <h1>
+    <%= @product_page.product.title %>
+  </h1>
+
+  <h2 style="color:<%= @increased ? 'red' : 'green' %>">
+    Price has <%= @increased ? 'increased' : 'decreased' %>
+  </h2>
+
+  <p>
+    New price is now <%= @new_price %>, was previously <%= @prev_price%>.
+  </p>
+
+  <p>
+    To check the product: <%= @product_page.url %>.
+  </p>
+  <p>Cheers!</p>
+</div>

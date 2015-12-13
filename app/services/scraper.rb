@@ -18,6 +18,10 @@ class Scraper
 
         product_page.in_stock = true
         product_page.save
+
+        if latest
+          AlertMailer.price_change_email(product_page, latest.price, price).deliver_now
+        end
       end
     elsif document.at_css('#outOfStock')
       # mark as out of stock
