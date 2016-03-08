@@ -12,4 +12,12 @@ class ProductPage < ActiveRecord::Base
   def latest_price
     PriceHistory.where(product_page: self).order('created_at desc').take
   end
+
+  def costliest
+    PriceHistory.where(product_page: self).maximum('price')
+  end
+
+  def cheapest
+    PriceHistory.where(product_page: self).minimum('price')
+  end
 end

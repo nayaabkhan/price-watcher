@@ -3,12 +3,16 @@
 <head>
   <title>PriceWatcher</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'https://fonts.googleapis.com/css?family=Lato:400,700,300' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://www.google.com/jsapi', 'chartkick' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
+<div class="container">
 <%= yield %>
+</div>
 
 </body>
 </html>

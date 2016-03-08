@@ -1,3 +1,42 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: Lato;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.page-title,
+.product-title,
+.product-price,
+.product-price-extremes {
+  text-align: center;
+}
+
+.product-title {
+  margin: 20px 5px 0 0;
+  font-weight: 100;
+}
+
+.product-price {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 100;
+}
+
+.product-price-extremes {
+  margin: 0;
+}
+
+.product-price-costliest {
+  color: red;
+}
+
+.product-price-cheapest {
+  color: green;
+}

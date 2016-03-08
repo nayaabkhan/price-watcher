@@ -29,6 +29,9 @@ gem 'nokogiri'
 # Active Admin for admin interface
 gem 'activeadmin', github: 'activeadmin'
 
+# Charting Gem
+gem 'chartkick'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -1,2 +1,14 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div>
+  <h1 class="page-title">All Products</h1>
+  <% ProductPage.find_each do |p| %>
+    <h3 class="product-title"><%= p.product.title %></h3>
+    <h4 class="product-price">₹<%= p.latest_price.price %></h4>
+    <h5 class="product-price-extremes">
+      <small class="product-price-costliest">₹<%= p.costliest %></small> —
+      <small class="product-price-cheapest">₹<%= p.cheapest %></small>
+    </h5>
+    <div>
+      <%= line_chart(p.price_histories.pluck(:created_at, :price)) %>
+    </div>
+  <% end %>
+</div>
