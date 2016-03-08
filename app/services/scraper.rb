@@ -6,7 +6,7 @@ class Scraper
   def self.fetch(product_page)
     document = Nokogiri::HTML(open(product_page.url))
 
-    latest = PriceHistory.where(product_page: product_page).order('created_at desc').take
+    latest = product_page.latest_price
 
     price_block = document.at_css('#olp_feature_div .a-color-price')
 

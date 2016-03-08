@@ -8,4 +8,8 @@ class ProductPage < ActiveRecord::Base
   validates :url, uniqueness: { case_sensitive: false }
   validates :product, presence: true
   validates :site, presence: true
+
+  def latest_price
+    PriceHistory.where(product_page: self).order('created_at desc').take
+  end
 end
