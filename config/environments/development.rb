@@ -17,11 +17,11 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.smtp_settings = {
-    address:              'smtp.mandrillapp.com',
+    address:              'smtp.mailgun.org',
     port:                 587,
-    domain:               'pricealert.com',
-    user_name:            'khannayaab@gmail.com',
-    password:             '8k4lT7F1FFToVTxEbv_QhA',
+    domain:               'nayaabkhan.me',
+    user_name:            'postmaster@nayaabkhan.me',
+    password:             'd882202caf54de69837fcd574f53eaea',
     authentication:       'plain',
     enable_starttls_auto: true
   }
