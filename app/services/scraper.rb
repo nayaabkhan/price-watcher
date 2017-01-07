@@ -4,7 +4,12 @@ require 'open-uri'
 
 class Scraper
   def self.fetch(product_page)
-    document = Nokogiri::HTML(open(product_page.url))
+    document = Nokogiri::HTML(open(
+      product_page.url,
+      "User-Agent" => "Ruby/#{RUBY_VERSION}",
+      "From" => "khannayaab@gmail.com",
+      "Referer" => "http://www.ruby-lang.org/"
+    ))
 
     latest = product_page.latest_price
 
