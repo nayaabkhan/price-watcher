@@ -11,6 +11,10 @@ ActiveAdmin.register_page "Dashboard" do
               product_page.product.title
             end
 
+            column "Site" do |product_page|
+              product_page.site.name
+            end
+
             column "In Stock?" do |product_page|
               if product_page.in_stock == true
                 'Yes'
